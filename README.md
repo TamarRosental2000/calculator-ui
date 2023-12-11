@@ -19,4 +19,15 @@ This is a simple calculator app built with Angular.
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/calculator-app.git
+   git clone https://github.com/TamarRosental2000/calculator-ui.git
+   
+2. Install npm:
+
+   ```bash
+   cd .\calculator-ui\
+   npm install
+   
+3. run:
+
+   ```bash
+   ng s
