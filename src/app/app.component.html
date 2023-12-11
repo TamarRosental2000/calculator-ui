@@ -1,0 +1,28 @@
+<div>
+  <label for="fieldA">Field1:</label>
+  <input [(ngModel)]="fieldA" id="fieldA" />
+
+  <label for="operation">Operation:</label>
+  <select [(ngModel)]="operation" id="operation">
+    <option *ngFor="let op of operations" [value]="op">{{ op }}</option>
+  </select>
+
+  <label for="fieldB">Field2:</label>
+  <input [(ngModel)]="fieldB" id="fieldB" />
+
+  <button (click)="executeOperation()">Execute</button>
+</div>
+
+<div *ngIf="result">
+  <h2>Result: {{ result }}</h2>
+  <h3>Last 3 Operations:</h3>
+  <ul>
+    <li *ngFor="let operation of response.lastOperations">
+       {{ operation.fieldA }}
+       {{ operation.operator }} 
+       {{ operation.fieldB }} =
+       {{ operation.result }}
+    </li>
+  </ul>
+  <p>Total operations this month: {{ response?.count }}</p>
+</div>
